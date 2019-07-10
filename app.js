@@ -1,5 +1,3 @@
-// Vue.use(Router)
-
 const app = new Vue({
     el: '#app',
     data: {
@@ -15,10 +13,16 @@ const app = new Vue({
     },
 
     methods: {
+        clear(){
+            this.message = ''
+        },
         onClick(){
             const url = `https://discordapp.com/api/webhooks/${this.discordToken}`;
             axios.post(url, {content: this.message})
-            .then(res => alert('success!'))
+            .then(res => {
+                alert('success!')
+                this.message = ''
+            })
             .catch(err => alert('error'))
             .finally();
         }

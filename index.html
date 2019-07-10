@@ -12,12 +12,12 @@
         <p>{{ message }}</p>
         <input v-model="message">
         <input type="submit" @click="onClick">
+        <input type="submit" value="クリア" @click="clear">
     </div>
 
     <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
